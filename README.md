@@ -1,122 +1,185 @@
-# 🚀 Sing App React - A Free & Open-Source React Admin Dashboard Template!
+# CoreUI Free React Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%React%204%20Admin%20Template%20&url=https://coreui.io&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
 
-[View Demo](https://flatlogic.com/templates/sing-app-react/demo) | [Download](https://github.com/flatlogic/sing-app-react/archive/refs/heads/master.zip) | [More Templates](https://flatlogic.com/templates) | [Discord Community](https://discord.gg/flatlogic-community) | [Support Forum](https://flatlogic.com/forum)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![@coreui coreui](https://img.shields.io/badge/@coreui%20-coreui-lightgrey.svg?style=flat-square)](https://github.com/coreui/coreui)
+[![npm package][npm-coreui-badge]][npm-coreui]
+[![NPM downloads][npm-coreui-download]][npm-coreui]
+[![@coreui react](https://img.shields.io/badge/@coreui%20-react-lightgrey.svg?style=flat-square)](https://github.com/coreui/react)
+[![npm package][npm-coreui-react-badge]][npm-coreui-react]
+[![NPM downloads][npm-coreui-react-download]][npm-coreui-react]  
 
-**Originally a premium product priced at $69+, made available for free in January 2025!** 🎉
+[npm-coreui]: https://www.npmjs.com/package/@coreui/coreui
+[npm-coreui-badge]: https://img.shields.io/npm/v/@coreui/coreui.png?style=flat-square
+[npm-coreui-download]: https://img.shields.io/npm/dm/@coreui/coreui.svg?style=flat-square
+[npm-coreui-react]: https://www.npmjs.com/package/@coreui/react
+[npm-coreui-react-badge]: https://img.shields.io/npm/v/@coreui/react.png?style=flat-square
+[npm-coreui-react-download]: https://img.shields.io/npm/dm/@coreui/react.svg?style=flat-square
+[npm]: https://www.npmjs.com/package/@coreui/react
 
-Looking for a perfect codebase generator for your Startup? Try [Flatlogic AI Web App Generator](https://flatlogic.com/generator) - our new tool, sort of a template++.
+[![Bootstrap Admin Template](https://assets.coreui.io/products/coreui-free-bootstrap-admin-template-light-dark.webp)](https://coreui.io/product/free-react-admin-template/)
 
----
+CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
 
-## 🎯 Why Sing App React?
-- **Ex-Premium**: This template was previously paid. Enjoy it for free now. 😉
-- **React + Bootstrap 5**: Built using modern tech stack for scalability and performance.
-- **Join the Community**: [Flatlogic Discord](https://discord.gg/flatlogic-community) is where the action happens.
-- **Free Node.js Backend**: Pair it up with [this backend](https://github.com/flatlogic/nodejs-backend) to go full-stack.
+## Table of Contents
 
----
+* [Versions](#versions)
+* [CoreUI PRO](#coreui-pro)
+* [CoreUI PRO React Admin Templates](#coreui-pro-react-admin-templates)
+* [Quick Start](#quick-start)
+* [Installation](#installation)
+* [Basic usage](#basic-usage)
+* [What's included](#whats-included)
+* [Documentation](#documentation)
+* [Versioning](#versioning)
+* [Creators](#creators)
+* [Community](#community)
+* [Support CoreUI Development](#support-coreui-development)
+* [Copyright and License](#copyright-and-license)
 
-## 🚀 Quick Start
+## Versions
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/flatlogic/sing-app-react.git
-   cd sing-app-react
-   ```
-2. **Install dependencies**  
-   ```bash
-   yarn install  # Or npm install
-   ```
-3. **Run the app**  
-   ```bash
-   yarn start
-   ```
-   Navigate to http://localhost:3000/.
+* [CoreUI Free Bootstrap Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
+* [CoreUI Free Angular Admin Template](https://github.com/coreui/coreui-free-angular-admin-template)
+* [CoreUI Free React.js Admin Template (Vite)](https://github.com/coreui/coreui-free-react-admin-template)
+* [CoreUI Free React.js Admin Template (Create React App)](https://github.com/coreui/coreui-free-react-admin-template-cra)
+* [CoreUI Free Vue.js Admin Template](https://github.com/coreui/coreui-free-vue-admin-template)
 
-4. **Backend Support**  
-   ```bash
-   yarn start:backend
-   ```
+## CoreUI PRO
 
-5. **Build for production**  
-   ```bash
-   yarn build
-   ```
+* 💪  [CoreUI PRO Angular Admin Template](https://coreui.io/product/angular-dashboard-template/)
+* 💪  [CoreUI PRO Bootstrap Admin Template](https://coreui.io/product/bootstrap-dashboard-template/)
+* 💪  [CoreUI PRO Next.js Admin Template](https://coreui.io/product/next-js-dashboard-template/)
+* 💪  [CoreUI PRO React Admin Template](https://coreui.io/product/react-dashboard-template/)
+* 💪  [CoreUI PRO Vue Admin Template](https://coreui.io/product/vue-dashboard-template/)
 
----
+## CoreUI PRO React Admin Templates
 
-## 🧩 Features
+| Default Theme | Light Theme |
+| --- | --- |
+| [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_default_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=default) | [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_light_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=light)|
 
-- Fully Responsive Layout
-- Bootstrap 5
-- React 17
-- Reactstrap 9
-- 8 Chart Libraries
-- 2 Dashboards
-- Theme Support
-- E-Commerce Section
-- Static & Hover Sidebar
-- Fully Documented Codebase
+| Modern Theme | Bright Theme |
+| --- | --- |
+| [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_default_v3_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=modern) | [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_light_v3_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=bright)|
 
----
+## Quick Start
 
-## 🛠 Built With
-- React 17
-- Bootstrap 5
-- Redux
-- Webpack
-- JavaScript (ES6)
+- [Download the latest release](https://github.com/coreui/coreui-free-react-admin-template/archive/refs/heads/main.zip)
+- Clone the repo: `git clone https://github.com/coreui/coreui-free-react-admin-template.git`
 
----
+### Installation
 
-## 📦 Pages
-- Dashboard
-- E-commerce (Product Grid, Product Page, Management)
-- Profile
-- Forms
-- Charts
-- Tables
-- Maps
-- Icons
-- Notifications
-- Login / Error Pages
+``` bash
+$ npm install
+```
 
----
+or
 
-## 🌍 Available Variants
+``` bash
+$ yarn install
+```
 
-|               | **Material**                                              | **Transparent**                                         | **Classic**                                          | **Sofia**                                          | **Flatlogic**                                      |
-|---------------|-----------------------------------------------------------|---------------------------------------------------------|-------------------------------------------------------|-----------------------------------------------------|----------------------------------------------------|
-| **React**     | [React Material Admin](https://github.com/flatlogic/react-material-admin-full) | [Light Blue React](https://github.com/flatlogic/light-blue-react) | [Sing App React](https://github.com/flatlogic/sing-app-react) | [Sofia React](https://github.com/flatlogic/sofia-react) | [One React](https://github.com/flatlogic/one-react) |
-| **Angular**   | [Angular Material Admin](https://github.com/flatlogic/angular-material-admin-full) | [Light Blue Angular](https://github.com/flatlogic/light-blue-angular) | [Sing App Angular](https://github.com/flatlogic/sing-app-angular) | - | - |
-| **Vue**       | [Material Vue](https://github.com/flatlogic/material-vue-full) | [Light Blue Vue](https://github.com/flatlogic/light-blue-vue) | [Sing App Vue](https://github.com/flatlogic/sing-app-vue) | - | - |
-| **Bootstrap** | - | [Light Blue HTML5](https://github.com/flatlogic/light-blue-html5) | [Sing App HTML5](https://github.com/flatlogic/sing-app-html5) | - | [One Bootstrap](https://github.com/flatlogic/one-bootstrap-template-full) |
+### Basic usage
 
+``` bash
+# dev server with hot reload at http://localhost:3000
+$ npm start 
+```
 
-Additionally, these templates are tailored for specific business needs:
-- [E-Commerce Frontend (React)](https://github.com/flatlogic/ecommerce-frontend) - A complete e-commerce solution.
-- [Bookkeeper UI (React)](https://github.com/flatlogic/bookkeeper-ui) - Accounting dashboard for finance management.
-- [User Management Template (React)](https://github.com/flatlogic/user-management-template) - User authentication and management.
+or 
 
----
+``` bash
+# dev server with hot reload at http://localhost:3000
+$ yarn start
+```
 
-## 👨‍💻 How to Contribute
-- **Star this repo ⭐** - show some love.
-- **Report bugs** - but be nice.
-- **Join the [Discord](<insert-discord-invite-link>)** - meet fellow devs.
+Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
 
----
+#### Build
 
-## 🔥 About Flatlogic
-[Flatlogic AI Software Engineer](https://flatlogic.com/ai-software-development-agent) builds modern business software so you don't have to. Our AI Software Development Agent helps you generate, deploy, and maintain enterprise applications with minimal effort.
+Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
 
----
+```bash
+# build for production with minification
+$ npm run build
+```
 
-## 📜 License
-This template is free to use. Modify it, break it, make it your own. Just don’t try to sell it back to us. 😎
+or
 
----
+```bash
+# build for production with minification
+$ yarn build
+```
 
-> **Questions or feedback?**  
-> Join our [Flatlogic Community Discord](https://discord.gg/flatlogic-community) or visit our [support forum](https://flatlogic.com/forum). We might even reply!
+## What's included
 
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+
+```
+coreui-free-react-admin-template
+├── public/          # static files
+│   ├── favicon.ico
+│   └── manifest.json
+│
+├── src/             # project root
+│   ├── assets/      # images, icons, etc.
+│   ├── components/  # common components - header, footer, sidebar, etc.
+│   ├── layouts/     # layout containers
+│   ├── scss/        # scss styles
+│   ├── views/       # application views
+│   ├── _nav.js      # sidebar navigation config
+│   ├── App.js
+│   ├── index.js
+│   ├── routes.js    # routes config
+│   └── store.js     # template state example 
+│
+├── index.html       # html template
+├── ...
+├── package.json
+├── ...
+└── vite.config.mjs  # vite config
+```
+
+## Documentation
+
+The documentation for the CoreUI Admin Template is hosted at our website [CoreUI for React](https://coreui.io/react/docs/templates/installation/)
+
+## Versioning
+
+For transparency into our release cycle and in striving to maintain backward compatibility, CoreUI Free Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+
+See [the Releases section of our project](https://github.com/coreui/coreui-free-react-admin-template/releases) for changelogs for each release version.
+
+## Creators
+
+**Łukasz Holeczek**
+
+* <https://twitter.com/lukaszholeczek>
+* <https://github.com/mrholek>
+
+**Andrzej Kopański**
+
+* <https://github.com/xidedix>
+
+**CoreUI Team**
+
+* <https://twitter.com/core_ui>
+* <https://github.com/coreui>
+* <https://github.com/orgs/coreui/people>
+
+## Community
+
+Get updates on CoreUI's development and chat with the project maintainers and community members.
+
+- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
+- Read and subscribe to [CoreUI Blog](https://coreui.ui/blog/).
+
+## Support CoreUI Development
+
+CoreUI is an MIT-licensed open source project and is completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support development by buying the [CoreUI PRO](https://coreui.io/pricing/?framework=react&src=github-coreui-free-react-admin-template) or by becoming a sponsor via [Open Collective](https://opencollective.com/coreui/).
+
+## Copyright and License
+
+copyright 2025 creativeLabs Łukasz Holeczek.   
+
+Code released under [the MIT license](https://github.com/coreui/coreui-free-react-admin-template/blob/main/LICENSE).
