@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.body {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}

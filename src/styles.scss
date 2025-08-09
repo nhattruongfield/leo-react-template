@@ -1,0 +1,9 @@
+// style.scss
+$primary: #845ef7;
+$font-size-base: 0.95rem;
+
+// Import CoreUI với @use
+@use '@coreui/coreui/scss/coreui' with (
+  $primary: $primary,
+  $font-size-base: $font-size-base
+);
