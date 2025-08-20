@@ -1,47 +1,70 @@
 // src/auth/AuthContext.tsx
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from 'react'
+import { login, type LoginRequest } from '../services/AuthService'
 
-type User = { name: string; email: string }
-type AuthContextType = {
-  isAuthenticated: boolean
+interface User {
+  name: string
+  email: string
+}
+
+interface AuthContextType {
   user: User | null
-  login: (u: User) => void
+  login: (req: LoginRequest) => Promise<void>
   logout: () => void
+  isAuthenticated: boolean
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
-    const raw = localStorage.getItem('auth:user')
-    if (raw) setUser(JSON.parse(raw))
+    const rawUser = localStorage.getItem('auth_user')
+    if (rawUser) {
+      setUser(JSON.parse(rawUser))
+    }
   }, [])
 
-  const login = (u: User) => {
+  const loginHandler = async (req: LoginRequest) => {
+    const res = await login(req)
+    // Lưu token và user vào localStorage
+    localStorage.setItem('auth_token', res.token)
+    const u: User = { name: res.userName, email: req.username }
+    localStorage.setItem('auth_user', JSON.stringify(u))
     setUser(u)
-    localStorage.setItem('auth:user', JSON.stringify(u))
   }
-
+  
   const logout = () => {
+    localStorage.removeItem('auth_token')
+    localStorage.removeItem('auth_user')
     setUser(null)
-    localStorage.removeItem('auth:user')
   }
 
-  const value = useMemo(() => ({
-    isAuthenticated: !!user,
-    user,
-    login,
-    logout,
-  }), [user])
-
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        login: loginHandler,
+        logout,
+        isAuthenticated: !!user,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  )
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const useAuth = () => {
+export function useAuth(): AuthContextType {
   const ctx = useContext(AuthContext)
-  if (!ctx) throw new Error('useAuth must be used within AuthProvider')
+  if (!ctx) {
+    throw new Error('useAuth must be used inside AuthProvider')
+  }
   return ctx
 }

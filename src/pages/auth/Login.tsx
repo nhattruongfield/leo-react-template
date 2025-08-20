@@ -1,41 +1,63 @@
 // src/pages/auth/Login.tsx
-import React from 'react'
-import { CCard, CCardBody, CCardHeader, CForm, CFormInput, CFormLabel, CButton } from '@coreui/react'
+import React, { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../../auth/AuthContext'
-import { useLocation, useNavigate } from 'react-router-dom'
+import {
+  CCard, CCardBody, CCardHeader,
+  CForm, CFormInput, CFormLabel, CButton,
+} from '@coreui/react'
 
-const Login: React.FC = () => {
+export default function Login() {
   const { login } = useAuth()
   const navigate = useNavigate()
   const location = useLocation() as any
   const from = location.state?.from?.pathname || '/'
 
-  const onSubmit: React.FormEventHandler = (e) => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    login({ name: 'Truong', email: 'truong@example.com' })
-    navigate(from, { replace: true })
+    try {
+      await login({ username, password })
+      navigate(from, { replace: true })
+    } catch (err: any) {
+      setError(err.response?.data?.message || 'Đăng nhập thất bại')
+    }
   }
 
   return (
-    <CCard className="mx-auto" style={{ maxWidth: 480 }}>
+    <CCard className="mx-auto" style={{ maxWidth: 400 }}>
       <CCardHeader><strong>Đăng nhập</strong></CCardHeader>
       <CCardBody>
-        <CForm onSubmit={onSubmit} className="row g-3">
+        {error && <div className="text-danger mb-2">{error}</div>}
+        <CForm onSubmit={handleSubmit} className="row g-3">
           <div className="col-12">
             <CFormLabel>Email</CFormLabel>
-            <CFormInput type="email" required />
+            <CFormInput
+              type="text"
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+              required
+            />
           </div>
           <div className="col-12">
             <CFormLabel>Mật khẩu</CFormLabel>
-            <CFormInput type="password" required />
+            <CFormInput
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+            />
           </div>
           <div className="col-12">
-            <CButton color="primary" type="submit" className="w-100">Đăng nhập</CButton>
+            <CButton color="primary" type="submit" className="w-100">
+              Đăng nhập
+            </CButton>
           </div>
         </CForm>
       </CCardBody>
     </CCard>
   )
 }
-
-export default Login
