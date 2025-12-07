@@ -1,42 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #1a1a1a; /* Đen than */
+  --accent-color: #c5a059;  /* Vàng Gold nhạt */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Button sang trọng: Hình chữ nhật, outline, hover đổi màu */
+.btn-luxury {
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  border-radius: 0; /* Vuông vức */
 }
 
-.card {
-  padding: 2em;
+.btn-luxury:hover {
+  background: var(--primary-color);
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+/* Badge giảm giá */
+.badge-sale {
+  background-color: #b71c1c; /* Đỏ đậm sang trọng */
+  font-weight: 300;
+  border-radius: 0;
 }
